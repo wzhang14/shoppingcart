@@ -37,7 +37,42 @@
                         <form:hidden path="newProduct"/>
                     </c:if>
                 </td>
-                <td><form:errors ></form:errors>)
+                <td><form:errors path="code" class="error-message"/></td>
+            </tr>
+            
+            <tr>
+                <td>Name*</td>
+                <td><form:input path="name"/></td>
+                <td><form:errors path="name" class="error-message"/></td>
+            </tr>
+            
+            <tr>
+                <td>Price*</td>
+                <td><form:input path="price"/></td>
+                <td><form:errors path="price" class="error-message"/></td>
+            </tr>
+            
+            <tr>
+                <td>Image</td>
+                <td>
+                <img src="${pageContext.request.contextPath}/productImage?code=${productForm.code}" width="100"/></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Upload Image</td>
+                <td><form:input type="file" path="fileData"/></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Submit"/><input type="reset" value="Reset"/></td>
+            </tr>
+        </table>
+    </form:form>
+
+<jsp:include page="_footer.jsp"/>
 
 </body>
 </html>
