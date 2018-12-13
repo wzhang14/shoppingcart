@@ -25,8 +25,35 @@
             <tr>
                 <td>Name*</td>
                 <td><form:input path="name"/></td>
-                <td><form:errors path="name"
+                <td><form:errors path="name" class="error-message"/></td>
+            </tr>
+            
+            <tr>
+                <td>Email*</td>
+                <td><form:input path="emai"/></td>
+                <td><form:errors path="email" class="errro-message"/></td>
+            </tr>
+            
+            <tr>
+                <td>Phone*</td>
+                <td><form:input path="phone"/></td>
+                <td><form:errors path="phone" class="error-message"/></td>
+            </tr>
+            
+            <tr>
+                <td>Address*</td>
+                <td><form:input path="address"/></td>
+                <td><form:errors path="address" class="error-message"/></td>
+            </tr>
+            
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Submit"/><input type="reset" value="Reset"/></td>
+            </tr>
         </table>
-
+    </form:form>
+    
+    <jsp:include page="_footer.jsp"/>
+    
 </body>
 </html>
